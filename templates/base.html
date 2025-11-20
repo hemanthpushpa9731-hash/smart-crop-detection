@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}🌾 AI Smart Farming Assistant{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- App Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Fixed Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                <span>🌾</span>
+                <span>Navigation</span>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <div class="nav-item">
+                <a href="/" class="nav-link-custom {% if request.endpoint == 'index' %}active{% endif %}">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-emoji">🏠</span>
+                    <span>Home</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="/crop-prediction" class="nav-link-custom {% if request.endpoint == 'crop_prediction_page' %}active{% endif %}">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-emoji">🌱</span>
+                    <span>Crop Recommendation</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="/disease-detection" class="nav-link-custom {% if request.endpoint == 'disease_detection_page' %}active{% endif %}">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-emoji">🍎</span>
+                    <span>Disease Detection</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="/chatbot" class="nav-link-custom {% if request.endpoint == 'chatbot_page' %}active{% endif %}">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-emoji">💬</span>
+                    <span>AI Assistant</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="/history" class="nav-link-custom {% if request.endpoint == 'history_page' %}active{% endif %}">
+                    <span class="nav-indicator"></span>
+                    <span class="nav-emoji">📜</span>
+                    <span>History</span>
+                </a>
+            </div>
+        </nav>
+        
+        <!-- About Box -->
+        <div class="about-box">
+            <div class="about-title">
+                <span>🌾</span>
+                <span>About</span>
+            </div>
+            <div class="about-text">
+                AI Smart Farming Assistant integrates machine learning and AI to help farmers:
+            </div>
+            <ul class="about-list">
+                <li>Get crop recommendations based on soil and climate</li>
+                <li>Detect apple plant diseases</li>
+                <li>Receive expert farming guidance (online & offline)</li>
+                <li>Track historical data locally</li>
+            </ul>
+            <div class="about-text mt-3" style="font-size: 0.85rem;">
+                Powered by ML models, OpenAI, and local offline AI.<br>
+                Works completely offline!
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation Bar -->
+        <header class="topbar mb-3">
+            <div class="topbar-inner">
+                <div class="topbar-brand">
+                    <span class="me-2">🌿</span>AgriVision
+                </div>
+                <nav class="topbar-nav">
+                    <a href="/" class="top-link {% if request.endpoint == 'index' %}active{% endif %}"><i class="bi bi-house-door me-1"></i>Home</a>
+                    <a href="/crop-prediction" class="top-link {% if request.endpoint == 'crop_prediction_page' %}active{% endif %}"><i class="bi bi-flower1 me-1"></i>Crop Recommendation</a>
+                    <a href="/disease-detection" class="top-link {% if request.endpoint == 'disease_detection_page' %}active{% endif %}"><i class="bi bi-activity me-1"></i>AI Diagnose</a>
+                    <a href="/chatbot" class="top-link {% if request.endpoint == 'chatbot_page' %}active{% endif %}"><i class="bi bi-robot me-1"></i>Assistant</a>
+                    <a href="/history" class="top-link {% if request.endpoint == 'history_page' %}active{% endif %}"><i class="bi bi-clock-history me-1"></i>History</a>
+                </nav>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+        <footer class="app-footer mt-5 rounded-3 p-4">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <div class="mb-2 mb-md-0">
+                    <strong>AgriVision</strong> • Empowering Smart Farming
+                </div>
+                <div class="d-flex gap-3 small">
+                    <a href="/">Home</a>
+                    <a href="/disease-detection">AI Diagnose</a>
+                    <a href="/crop-prediction">Crop Recommendation</a>
+                    <a href="/chatbot">Assistant</a>
+                    <a href="/history">History</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

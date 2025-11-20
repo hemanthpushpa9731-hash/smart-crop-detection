@@ -1,0 +1,30 @@
+# SmartCropSprayer - Python Flask AI Agriculture Project
+# Compatible with Python 3.10+
+# All dependencies required for deployment
+
+# Web Framework
+Flask>=3.0.0,<4.0.0
+Werkzeug>=3.0.0,<4.0.0
+
+# Data Processing & Machine Learning
+numpy>=1.26.0,<2.0.0
+pandas>=2.0.0,<2.3.0
+scikit-learn>=1.7.2,<2.0.0
+
+# Image Processing
+Pillow>=12.0.0,<12.1.0
+opencv-python-headless>=4.11.0.86,<5.0.0
+
+# Deep Learning (PyTorch for Disease Detection)
+torch>=2.0.0,<3.0.0
+torchvision>=0.15.0,<1.0.0
+
+# Optional: OpenAI API (for online chatbot - project works offline without this)
+openai>=1.0.0,<2.0.0
+
+# Note: Built-in Python modules used (no installation needed):
+# - sqlite3 (database)
+# - json (data serialization)
+# - os, io, datetime (file/system operations)
+# - pickle (model serialization)
+# - random, re (utility functions)

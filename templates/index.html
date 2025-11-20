@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AI Smart Farming Assistant{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="card mb-4" style="background: linear-gradient(180deg, #e9f7ee, #f6fff9); border-color: var(--border);">
+    <div class="card-body py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-md-7">
+                <h1 class="display-5 fw-bold" style="color:#0b3a23; letter-spacing:-0.02em;">
+                    Harvest Tomorrow’s Farming <span style="color: var(--primary);">Today</span>
+                </h1>
+                <p class="mt-3" style="color: var(--muted); font-size:1.05rem;">
+                    Best-in-class AI that helps you predict the right crop, detect diseases early, and get expert guidance.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="/disease-detection" class="btn btn-primary"><i class="bi bi-search me-2"></i>Detect Plant Disease</a>
+                    <a href="/crop-prediction" class="btn btn-outline-primary"><i class="bi bi-flower1 me-2"></i>Recommend Crop</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">🌿</div>
+                    <div class="feature-text">Smart farming made simple and effective with AI.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<h1 class="page-title">
+    <span>🌾</span>
+    <span>AI Smart Farming Assistant</span>
+</h1>
+<p class="page-subtitle">
+    <span>→</span>
+    <span>Welcome to Your Intelligent Farming Companion.</span>
+</p>
+
+<div class="mb-4">
+    <p style="color: #b0b0b0; font-size: 1.05rem;">
+        This integrated platform helps you make data-driven farming decisions through three powerful features:
+    </p>
+</div>
+
+<!-- Feature Cards -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3 class="feature-title">Crop Recommendation</h3>
+            <p class="feature-text">
+                Get personalized crop recommendations based on:<br>
+                • Soil nutrients (N, P, K, pH)<br>
+                • Environmental conditions
+            </p>
+            <div style="margin-top: auto;">
+                <strong>Get started:</strong>
+                <p class="feature-text" style="margin-top: 5px;">
+                    Enter your soil and climate data to discover the best crops for your land.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-icon">🍎</div>
+            <h3 class="feature-title">Disease Detection</h3>
+            <p class="feature-text">
+                AI-powered apple disease detection:<br>
+                • Upload images<br>
+                • Instant disease identification<br>
+                • Pesticide recommendations
+            </p>
+            <div style="margin-top: auto;">
+                <strong>Get started:</strong>
+                <p class="feature-text" style="margin-top: 5px;">
+                    Upload photos of your apple plants for instant analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3 class="feature-title">AI Assistant</h3>
+            <p class="feature-text">
+                Chat with your farming expert:<br>
+                • Get farming advice<br>
+                • Learn best practices<br>
+                • Ask about treatments
+            </p>
+            <div style="margin-top: auto;">
+                <strong>Get started:</strong>
+                <p class="feature-text" style="margin-top: 5px;">
+                    Ask any farming question and get expert guidance.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="card mb-4">
+    <div class="card-body p-4">
+        <h3 class="mb-4" style="color: #ffffff; font-weight: bold; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5rem;">📊</span>
+            <span>How It Works</span>
+        </h3>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card" style="padding: 25px;">
+                    <h5 style="font-weight: bold; margin-bottom: 15px;">Step 1: Analyze Your Land</h5>
+                    <p style="line-height: 1.7; margin: 0;">
+                        Enter soil and environmental parameters to get crop recommendations tailored to your conditions.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card" style="padding: 25px;">
+                    <h5 style="font-weight: bold; margin-bottom: 15px;">Step 2: Monitor Crop Health</h5>
+                    <p style="line-height: 1.7; margin: 0;">
+                        If growing apples, upload images to detect diseases early and get treatment recommendations.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card" style="padding: 25px;">
+                    <h5 style="font-weight: bold; margin-bottom: 15px;">Step 3: Get Expert Guidance</h5>
+                    <p style="line-height: 1.7; margin: 0;">
+                        Chat with our AI assistant for personalized advice on farming practices and problem-solving.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Supported Plants Section -->
+<div class="card mb-4">
+    <div class="card-body p-4">
+        <h3 class="mb-4" style="color: #0b3a23; font-weight: bold; text-align:center;">Supported Plants</h3>
+        <p class="text-center" style="color: var(--muted);">Detect diseases in Apple leaves and manage crops with data-driven insights.</p>
+        <div class="row g-3 mt-3">
+            <div class="col-6 col-md-3"><div class="feature-card text-center"><strong>Apple</strong></div></div>
+            <div class="col-6 col-md-3"><div class="feature-card text-center"><strong>Maize</strong></div></div>
+            <div class="col-6 col-md-3"><div class="feature-card text-center"><strong>Rice</strong></div></div>
+            <div class="col-6 col-md-3"><div class="feature-card text-center"><strong>Wheat</strong></div></div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/disease-detection" class="btn btn-primary"><i class="bi bi-activity me-2"></i>Start Disease Detection</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
