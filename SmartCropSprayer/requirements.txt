@@ -1,3 +1,4 @@
+
 # SmartCropSprayer - Python Flask AI Agriculture Project
 # Compatible with Python 3.10+
 # All dependencies required for deployment
