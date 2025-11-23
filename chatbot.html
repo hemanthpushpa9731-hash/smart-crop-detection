@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block title %}AI Assistant - AI Smart Farming Assistant{% endblock %}
+
+{% block content %}
+<h1 class="page-title">
+    <span>💬</span>
+    <span>AI Farming Assistant</span>
+</h1>
+<p class="page-subtitle">
+    <span>→</span>
+    <span>Chat with Your Agricultural Expert</span>
+</p>
+
+<div class="row g-4">
+    <!-- Left Column: Chat Interface -->
+    <div class="col-md-8">
+        <!-- Mode Info Cards -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-8">
+                <div class="card" style="background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); border: none; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-folder" style="font-size: 1.5rem; color: #ffffff;"></i>
+                        <div>
+                            <strong style="color: #ffffff; display: block;">Offline Mode: Works without internet!</strong>
+                            <small>Rule-based farming knowledge.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-lock-fill" style="color: #3b82f6;"></i>
+                        <div>
+                            <strong style="display: block; font-size: 0.9rem;">Using Offline Mode</strong>
+                            <small style="font-size: 0.8rem;">(No internet required)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    👋 Hello! I'm your {% if use_offline %}offline, rule-based{% else %}AI-powered{% endif %} farming assistant. Ask me anything about crops, diseases, soil management, or farming practices!
+                </div>
+            </div>
+            
+            <form id="chatForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="messageInput" placeholder="Ask me anything about farming..." autocomplete="off">
+                    <button class="btn btn-primary" type="submit" id="sendBtn">
+                        <i class="bi bi-send"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Right Column: Quick Topics -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="bi bi-lightning-fill me-2"></i>Quick Topics
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary quick-topic" data-topic="How to improve soil fertility?" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">🌿</span>Soil Health
+                    </button>
+                    <button class="btn btn-outline-primary quick-topic" data-topic="What are the best practices for water management and irrigation?" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">💧</span>Water Management
+                    </button>
+                    <button class="btn btn-outline-primary quick-topic" data-topic="What are the best practices for pest control?" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">🐛</span>Pest Control
+                    </button>
+                    <button class="btn btn-outline-primary quick-topic" data-topic="Tell me about organic farming practices" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">🌱</span>Organic Farming
+                    </button>
+                    <button class="btn btn-outline-primary quick-topic" data-topic="What fertilizer should I use for my crops?" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">💊</span>Fertilizers
+                    </button>
+                    <button class="btn btn-outline-primary quick-topic" data-topic="How to prevent plant diseases?" style="border-color: #404040; color: #e0e0e0; text-align: left;">
+                        <span style="margin-right: 10px;">🛡️</span>Disease Prevention
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatForm = document.getElementById('chatForm');
+    const messageInput = document.getElementById('messageInput');
+    const chatMessages = document.getElementById('chatMessages');
+    const sendBtn = document.getElementById('sendBtn');
+    const quickTopics = document.querySelectorAll('.quick-topic');
+    
+    quickTopics.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const topic = this.getAttribute('data-topic');
+            messageInput.value = topic;
+            chatForm.dispatchEvent(new Event('submit'));
+        });
+    });
+    
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const message = messageInput.value.trim();
+        if (!message) return;
+        
+        // Add user message
+        addMessage('user', message);
+        
+        // Clear input immediately
+        messageInput.value = '';
+        sendBtn.disabled = true;
+        
+        // Add loading indicator
+        const loadingId = addLoadingMessage();
+        
+        try {
+            const response = await fetch('/api/chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            });
+            
+            // Remove loading message immediately when response arrives
+            removeMessage(loadingId);
+            
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Failed to get response');
+            }
+            
+            const data = await response.json();
+            
+            // Add bot response with proper formatting
+            if (data.response) {
+                addMessage('bot', data.response);
+            } else {
+                throw new Error('No response from server');
+            }
+            
+        } catch (error) {
+            // Remove loading message on error
+            removeMessage(loadingId);
+            console.error('Chatbot error:', error);
+            addMessage('bot', 'Sorry, I encountered an error. Please try again. Error: ' + error.message);
+        } finally {
+            sendBtn.disabled = false;
+            messageInput.focus();
+        }
+    });
+    
+    function addMessage(sender, text) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message ' + sender;
+        
+        // Format text with line breaks preserved
+        const formattedText = text.replace(/\n/g, '<br>');
+        messageDiv.innerHTML = formattedText;
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function addLoadingMessage() {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message bot';
+        messageDiv.id = 'loading-msg';
+        messageDiv.innerHTML = '<span style="opacity: 0.7;">Thinking...</span>';
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        return 'loading-msg';
+    }
+    
+    function removeMessage(messageId) {
+        const element = document.getElementById(messageId);
+        if (element) {
+            element.remove();
+        }
+    }
+});
+</script>
+{% endblock %}
