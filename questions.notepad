@@ -1,0 +1,339 @@
+AI SMART FARMING ASSISTANT - CHATBOT REFERENCE QUESTIONS
+=========================================================
+
+Welcome to SmartCropSprayer AI Assistant!
+This file contains sample questions you can ask the intelligent chatbot.
+
+The system uses AI/ML models for:
+- Crop Prediction based on soil nutrients and climate
+- Apple Leaf Disease Detection using computer vision
+- AI-Powered Pesticide Recommendations
+- Real-time Farming Guidance
+
+Ask any of these questions in the chatbot at: http://127.0.0.1:5000/chatbot
+
+================================================================================
+
+MODULE 1: AI-BASED CROP PREDICTION & RECOMMENDATION
+================================================================================
+
+Which crop should I grow based on my soil type and temperature?
+Predict the best crop for my region using AI.
+How does AI-based crop prediction work?
+What crop is suitable for nitrogen level 50, phosphorus 40, potassium 60?
+Suggest crops that grow well in sandy soil.
+Which crop gives better yield in high rainfall areas?
+What crops can I grow in low rainfall areas?
+Recommend crops for pH 6.5 and temperature 25°C.
+Which crop is best for my soil nutrients: N=80, P=50, K=70?
+What is the most profitable crop for clayey soil?
+Suggest a crop for hot and humid climate conditions.
+Which crop requires less water and fertilizer?
+What crops are recommended for winter season?
+Predict suitable crops for alkaline soil with pH 7.5.
+Which crop can I grow after rice harvest?
+What is the best crop for nitrogen-deficient soil?
+Suggest drought-resistant crops using AI.
+Which legume crop is best for improving soil fertility?
+Can AI predict crops based on weather patterns?
+What crop should I plant for maximum profit?
+Recommend crops for phosphorus-rich soil.
+Which crop grows well in temperature range 20-30°C?
+Suggest crops for regions with 200mm annual rainfall.
+What is the ideal crop for potassium-deficient soil?
+How accurate is the AI crop prediction model?
+Which crop is suitable for both Kharif and Rabi seasons?
+Predict crops that require moderate humidity levels.
+What crop should I grow in tropical climate?
+
+
+MODULE 2: APPLE LEAF DISEASE DETECTION USING AI
+================================================================================
+
+How to identify apple leaf diseases using the camera?
+What AI model is used for apple disease detection?
+How to detect apple scab disease using AI?
+Can the system identify powdery mildew in apple leaves?
+What are early signs of apple scab disease?
+How to use AI for detecting plant diseases offline?
+Which diseases can the AI detect in apple leaves?
+How accurate is the apple disease detection model?
+Can I upload an image to detect leaf diseases?
+What is powdery mildew and how to identify it?
+How to detect healthy vs diseased apple leaves?
+What are symptoms of apple scab on leaves?
+Can the AI detect Apple Black Rot in apple leaves?
+How does computer vision detect leaf diseases?
+What should I do if AI detects apple scab?
+Can the system detect multiple diseases in one leaf?
+How to take a good photo for disease detection?
+What are common apple leaf diseases the AI can identify?
+How to prevent apple leaf diseases after AI detection?
+Can the AI detect disease severity level?
+What is the confidence score in disease detection?
+How to interpret AI disease detection results?
+Does the AI work with other fruit tree diseases?
+What image quality is needed for accurate detection?
+Can I detect diseases in real-time using mobile camera?
+How to identify fungal infections in apple leaves?
+What is the difference between Apple Black Rot and Apple Scab?
+Can the AI detect bacterial infections in leaves?
+
+
+MODULE 3: AI PESTICIDE RECOMMENDATION & PREDICTION
+================================================================================
+
+Suggest suitable pesticides for powdery mildew.
+Can the AI recommend organic pesticides automatically?
+Which pesticide should I use for fungal infections?
+What AI model is used for pesticide prediction?
+Suggest pesticides for bacterial blight in plants.
+What is the best pesticide for apple scab?
+Can the system recommend pesticide dosage?
+Suggest organic alternatives to chemical pesticides.
+Which pesticide is effective against Apple Black Rot?
+What pesticide should I use for leaf spot disease?
+Can AI predict pesticide requirements automatically?
+Recommend pesticides for rust disease in plants.
+What are safety precautions for pesticide application?
+Suggest natural pesticides for apple diseases.
+Which pesticide has minimal environmental impact?
+Can the AI recommend pesticide application timing?
+What is the recommended dosage for Mancozeb fungicide?
+Suggest pesticides for preventing fungal infections.
+Which pesticide is best for early-stage disease control?
+Can I get pesticide recommendations based on disease severity?
+What are eco-friendly pesticide alternatives?
+Recommend pesticides for preventing apple scab outbreaks.
+How often should I apply pesticides to apple trees?
+What is the difference between Mancozeb and Myclobutanil?
+Suggest pesticides that don't harm beneficial insects.
+Can AI recommend combination pesticide treatments?
+What pesticides are safe for organic farming?
+Which fungicide is most effective for severe infections?
+
+
+MODULE 4: CHATBOT FARMING ASSISTANCE & GUIDANCE
+================================================================================
+
+How can the chatbot help me with farming decisions?
+What farming topics can I ask the AI assistant?
+Can the chatbot provide real-time farming advice?
+How does the offline chatbot work without internet?
+What knowledge base does the chatbot use?
+Can the chatbot integrate crop and disease data?
+How to get personalized farming recommendations?
+What is the difference between online and offline chatbot mode?
+Can the chatbot answer questions about specific crops?
+How intelligent is the AI farming assistant?
+Can I ask about multiple crops in one question?
+Does the chatbot learn from my previous questions?
+How to get the best answers from the chatbot?
+Can the chatbot provide step-by-step farming guidance?
+What makes this chatbot better than general farming apps?
+Can the chatbot suggest farming practices for my region?
+How does the chatbot use SmartCropSprayer data?
+Can I get weather-based farming advice?
+Does the chatbot provide scientific farming information?
+How to ask complex farming questions effectively?
+
+
+MODULE 5: SOIL HEALTH & FERTILIZER MANAGEMENT
+================================================================================
+
+What is the ideal fertilizer ratio for rice or wheat?
+How to improve nitrogen levels in the soil?
+What is the best NPK ratio for maize cultivation?
+How to balance soil nutrients for better yield?
+Suggest fertilizers for phosphorus-deficient soil.
+What is the ideal pH level for growing wheat?
+How to increase potassium content in soil naturally?
+What are signs of nitrogen deficiency in crops?
+Recommend organic fertilizers for apple orchards.
+How to manage soil pH for acidic conditions?
+What is the role of NPK in crop growth?
+How to improve soil fertility without chemicals?
+Suggest fertilizers for sandy soil improvement.
+What is the ideal nitrogen level for rice cultivation?
+How to correct phosphorus deficiency in soil?
+What are micronutrients and why are they important?
+How to prepare organic compost for fertilization?
+What is the effect of excessive nitrogen on crops?
+Recommend fertilizer schedule for apple trees.
+How to test soil nutrients at home?
+What is the best time to apply fertilizers?
+How to prevent nutrient lockout in soil?
+Suggest fertilizers for improving soil structure.
+What is green manure and how to use it effectively?
+How to increase organic matter in soil?
+What are symptoms of potassium deficiency in plants?
+Recommend bio-fertilizers for sustainable farming.
+How to maintain soil health throughout the year?
+
+
+MODULE 6: WATER MANAGEMENT & CLIMATE-BASED SUGGESTIONS
+================================================================================
+
+What is the water requirement for maize crop?
+Suggest crops for low water availability regions.
+How much water does rice need during growing season?
+What is the best irrigation method for wheat?
+Can AI suggest crops based on rainfall patterns?
+How to manage crops during drought conditions?
+What crops are suitable for areas with 150mm annual rainfall?
+How to conserve water in agriculture using AI insights?
+Suggest crops that tolerate water stress.
+What is drip irrigation and when to use it?
+How does temperature affect crop water requirements?
+Recommend crops for high humidity regions.
+What is the ideal temperature range for growing maize?
+How to protect crops from excessive rainfall damage?
+Suggest climate-resilient crops for changing weather.
+What crops grow well in tropical climate?
+How to manage irrigation during summer months?
+What is the effect of humidity on crop diseases?
+Recommend crops for arid and semi-arid regions.
+How to calculate crop water requirement accurately?
+What is the impact of climate change on farming?
+Suggest crops that need minimal irrigation.
+How to use weather forecasts for farming decisions?
+What crops are suitable for monsoon season?
+How to prevent waterlogging in fields?
+Recommend crops for temperate climate zones.
+What is the relationship between rainfall and crop yield?
+
+
+MODULE 7: PEST CONTROL & ORGANIC ALTERNATIVES
+================================================================================
+
+Can I use natural methods for pest control?
+What are organic alternatives for chemical pesticides?
+How to control aphids naturally in crops?
+Suggest biological pest control methods.
+What is integrated pest management (IPM)?
+How to prevent pest infestations organically?
+Can neem oil be used for pest control in apple orchards?
+What are natural predators for common crop pests?
+How to make organic pesticide at home?
+Suggest eco-friendly pest control solutions.
+What is the best organic method for controlling whiteflies?
+How to prevent caterpillar damage without chemicals?
+Can companion planting help in pest control?
+What are biopesticides and how effective are they?
+How to control fruit flies using organic methods?
+Suggest natural remedies for fungal infections.
+What is the role of beneficial insects in farming?
+How to prepare garlic spray for pest control?
+Can organic pest control be as effective as chemicals?
+What are disadvantages of chemical pesticides?
+How to control termites organically in fields?
+Suggest organic alternatives to synthetic fungicides?
+What is crop rotation and how does it prevent pests?
+How to use trap crops for pest management?
+Can mulching help in pest control?
+What are pheromone traps and how to use them?
+How to encourage natural pest predators in farms?
+Suggest organic methods for controlling root-knot nematodes.
+
+
+MODULE 8: GENERAL FARMING & BEST PRACTICES
+================================================================================
+
+What are best practices for sustainable farming?
+How to increase crop yield naturally?
+What is precision agriculture and its benefits?
+How can AI help improve farming productivity?
+What is the role of technology in modern farming?
+How to reduce farming costs using smart methods?
+What are government schemes for AI-based farming?
+How to practice crop rotation effectively?
+What is intercropping and its advantages?
+How to improve crop quality using AI recommendations?
+What are post-harvest management best practices?
+How to store harvested crops properly?
+What is organic farming certification process?
+How to start smart farming with limited resources?
+What are the benefits of using AI in agriculture?
+How to monitor crop health regularly?
+What is the importance of soil testing before planting?
+How to plan farming activities using weather data?
+What are common farming mistakes to avoid?
+How to increase farm profitability with AI tools?
+
+
+MODULE 9: SPECIFIC CROP CULTIVATION QUERIES
+================================================================================
+
+How to grow rice efficiently using AI recommendations?
+What are the growth stages of apple trees?
+How to cultivate wheat in different soil types?
+What is the ideal planting season for maize?
+How to increase apple yield using AI-based recommendations?
+What are best practices for banana cultivation?
+How to grow tomatoes with optimal fertilizer use?
+What is the cultivation process for cotton?
+How to prune apple trees for better fruit production?
+What spacing is recommended for maize planting?
+How to harvest rice at the right maturity stage?
+What are post-harvest practices for wheat storage?
+How to grow potatoes organically with high yield?
+What is the lifecycle of mango tree cultivation?
+How to manage apple orchards for disease prevention?
+What are key factors for successful rice farming?
+How to optimize maize growth with proper nutrients?
+What irrigation schedule is best for wheat crops?
+
+
+MODULE 10: ADVANCED AI & TECHNOLOGY QUESTIONS
+================================================================================
+
+How does machine learning predict crop suitability?
+What algorithms are used in disease detection AI?
+Can the system work offline without internet?
+How is the AI model trained for pesticide prediction?
+What is the accuracy of the crop recommendation model?
+How does image processing detect leaf diseases?
+What is the technology behind AI farming assistant?
+Can the system integrate with IoT sensors?
+How does the chatbot provide context-aware answers?
+What data is used to train the AI models?
+How often are the AI models updated?
+Can the system predict future crop diseases?
+What is the role of deep learning in agriculture?
+How does the AI analyze soil and climate data?
+Can the system provide region-specific recommendations?
+What is computer vision in disease detection?
+How does the offline chatbot work without API?
+Can I integrate this AI system with my farm sensors?
+What is the Random Forest algorithm in crop prediction?
+How does PyTorch ResNet18 help in disease detection?
+
+
+================================================================================
+QUICK START TIPS
+================================================================================
+
+→ For Crop Recommendations: Provide your soil parameters (N, P, K, pH, temp, humidity, rainfall)
+→ For Disease Detection: Upload clear images of apple leaves
+→ For Pesticide Suggestions: Specify the disease or pest type
+→ For General Guidance: Ask specific farming questions
+
+EXAMPLE COMPLETE QUERIES:
+- "Which crop for N=50, P=40, K=60, pH=6.5, temp=25, humidity=70, rainfall=150?"
+- "How to identify and treat powdery mildew in apple leaves?"
+- "Suggest organic pesticides for preventing fungal infections"
+- "What is the fertilizer requirement for rice in clayey soil?"
+
+================================================================================
+
+📊 Total Questions: 250+
+🎯 Modules Covered: 10 comprehensive categories
+🤖 AI Features: Crop Prediction, Disease Detection, Pesticide Recommendation
+🌾 Project: SmartCropSprayer - AI Smart Farming Assistant
+📅 Last Updated: November 2025
+
+For best results, visit: http://127.0.0.1:5000/chatbot
+Upload leaf images at: http://127.0.0.1:5000/disease-detection
+Get crop recommendations at: http://127.0.0.1:5000/crop-prediction
+
+================================================================================
